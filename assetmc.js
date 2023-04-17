@@ -4,7 +4,7 @@
 try {
     // authenticate to SFMC get access token
     console.log('Executing my Stupid Code that I have been working for hours!!!!!');
-    var authEndpoint = 'https://xxxxxxxxxx.auth.marketingcloudapis.com/' //provide API endpoint
+    var authEndpoint = 'https://xxxxxxxxxx.auth.marketingcloudapis.com' //provide API endpoint
     var payload = {
         client_id: "xxxxxxxxxxxxx",
         client_secret: "xxxxxxxxxxxxx",
