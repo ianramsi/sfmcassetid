@@ -4,11 +4,11 @@
 try {
     // authenticate to SFMC get access token
     console.log('Executing my Stupid Code that I have been working for hours!!!!!');
-    var authEndpoint = 'https://mcnnlkd7mzpd-bycw4jyx87ymq30.auth.marketingcloudapis.com/' //provide API endpoint
+    var authEndpoint = 'https://xxxxxxxxxx.auth.marketingcloudapis.com/' //provide API endpoint
     var payload = {
-        client_id: "u9isifkofpkuv3gneavm40pl",
-        client_secret: "PwZDtHIRPEfzJkXi3mRSqAUT",
-        account_id: "534004987",
+        client_id: "xxxxxxxxxxxxx",
+        client_secret: "xxxxxxxxxxxxx",
+        account_id: "xxxxxx7",
         grant_type: "client_credentials"
 
     };
