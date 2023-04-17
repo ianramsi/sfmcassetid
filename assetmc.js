@@ -3,23 +3,22 @@
 
 try {
     // authenticate to SFMC get access token
-    console.log('Executing my Stupid Code that I have been working for hours!!!!!');
+    var contentType = 'application/json';
     var authEndpoint = 'https://xxxxxxxxxx.auth.marketingcloudapis.com/v2/token' //provide API endpoint
     var payload = {
         client_id: "xxxxxxxxxxxxx",
         client_secret: "xxxxxxxxxxxxx",
         account_id: "xxxxxx7",
         grant_type: "client_credentials"
-
     };
-    var contentType = 'application/json';
-
-    var accessTokenRequest = HTTP.Post(url, contentType, Stringify(payload));
-    If (accessTokenRequest == 200) {
-        var tokenResponse = Platform.Function.ParseJSON(accessTokenRequest.Response[0]);
-        var accessToken = tokenResponse.access_token; //get token
-        var rest_instance_url = tokenResponse.rest_instance_url; //get rest url
-    };
+    
+    var accessTokenRequest = HTTP.Post(authEndpoint, contentType, Stringify(payload));
+    var resultCode = (accessTokenRequest.StatusCode);
+    if (resultCode == 200) {
+            var tokenResponse = Platform.Function.ParseJSON(accessTokenRequest.Response[0]);
+            var accessToken = tokenResponse.access_token;
+            var rest_instance_url = tokenResponse.rest_instance_url;
+        }
 
     //make api call via request
     if (access_token != null) {
