@@ -30,8 +30,8 @@ try {
             var assetCount = finalResponse.count;
             var pageCount = finalResponse.page;
             var pageSize = finalResponse.pageSize;
-			
-			var  iteraterows = Math.ceil (assetCount / pageSize) + 1; //formula to get how many times to call the the content api
+	    
+	    var  iteraterows = Math.ceil (assetCount / pageSize) + 1; //formula to get how many times to call the the content api
 	
             for (var y = 1; y < iteraterows; y++) {
                 var assetURLFinal = rest_instance_url+"asset/v1/content/assets?page="+y; //iterate content pages dynamically								
