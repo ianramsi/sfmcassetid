@@ -7,7 +7,7 @@ try {
     var authEndpoint = 'https://xxxxxxxxxx.auth.marketingcloudapis.com/v2/token' //provide API authendpoint, check your setup installed package
     var payload = {
         client_id: "xxxxxxxxxxxxx",  // client id
-        client_secret: "xxxxxxxxxxxxx",  // client id
+        client_secret: "xxxxxxxxxxxxx",  // client secret
         account_id: "xxxxxx7", // MID
         grant_type: "client_credentials"
     };
